@@ -104,6 +104,17 @@ namespace My5практика {
 			}
 			return min;
 		}
+
+		template <typename type>
+		int find(array <type^>^ Obj, type ^ f)
+		{
+			for (int i = 0; i < max_size; i++)
+			{
+				if (Obj[i] == f) return i;
+			}
+			return -1;
+		}
+
 		/// <summary>
 		/// Обязательная переменная конструктора.
 		/// </summary>
@@ -149,7 +160,7 @@ namespace My5практика {
 			// listBox1
 			// 
 			this->listBox1->FormattingEnabled = true;
-			this->listBox1->ItemHeight = 25;
+			this->listBox1->ItemHeight = 20;
 			this->listBox1->Location = System::Drawing::Point(36, 80);
 			this->listBox1->Margin = System::Windows::Forms::Padding(4, 5, 4, 5);
 			this->listBox1->Name = L"listBox1";
@@ -159,7 +170,7 @@ namespace My5практика {
 			// listBox2
 			// 
 			this->listBox2->FormattingEnabled = true;
-			this->listBox2->ItemHeight = 25;
+			this->listBox2->ItemHeight = 20;
 			this->listBox2->Location = System::Drawing::Point(279, 80);
 			this->listBox2->Margin = System::Windows::Forms::Padding(4, 5, 4, 5);
 			this->listBox2->Name = L"listBox2";
@@ -172,7 +183,7 @@ namespace My5практика {
 			this->label1->Location = System::Drawing::Point(88, 55);
 			this->label1->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
 			this->label1->Name = L"label1";
-			this->label1->Size = System::Drawing::Size(94, 25);
+			this->label1->Size = System::Drawing::Size(77, 20);
 			this->label1->TabIndex = 2;
 			this->label1->Text = L"2D points";
 			// 
@@ -182,7 +193,7 @@ namespace My5практика {
 			this->label2->Location = System::Drawing::Point(340, 55);
 			this->label2->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
 			this->label2->Name = L"label2";
-			this->label2->Size = System::Drawing::Size(94, 25);
+			this->label2->Size = System::Drawing::Size(77, 20);
 			this->label2->TabIndex = 3;
 			this->label2->Text = L"3D points";
 			// 
@@ -192,7 +203,7 @@ namespace My5практика {
 			this->textBox1->ForeColor = System::Drawing::Color::GreenYellow;
 			this->textBox1->Location = System::Drawing::Point(11, 68);
 			this->textBox1->Name = L"textBox1";
-			this->textBox1->Size = System::Drawing::Size(174, 30);
+			this->textBox1->Size = System::Drawing::Size(174, 26);
 			this->textBox1->TabIndex = 4;
 			// 
 			// textBox2
@@ -201,7 +212,7 @@ namespace My5практика {
 			this->textBox2->ForeColor = System::Drawing::Color::Crimson;
 			this->textBox2->Location = System::Drawing::Point(11, 129);
 			this->textBox2->Name = L"textBox2";
-			this->textBox2->Size = System::Drawing::Size(174, 30);
+			this->textBox2->Size = System::Drawing::Size(174, 26);
 			this->textBox2->TabIndex = 5;
 			// 
 			// label3
@@ -209,7 +220,7 @@ namespace My5практика {
 			this->label3->AutoSize = true;
 			this->label3->Location = System::Drawing::Point(6, 40);
 			this->label3->Name = L"label3";
-			this->label3->Size = System::Drawing::Size(134, 25);
+			this->label3->Size = System::Drawing::Size(111, 20);
 			this->label3->TabIndex = 6;
 			this->label3->Text = L"Наибольший:";
 			// 
@@ -218,7 +229,7 @@ namespace My5практика {
 			this->label4->AutoSize = true;
 			this->label4->Location = System::Drawing::Point(6, 101);
 			this->label4->Name = L"label4";
-			this->label4->Size = System::Drawing::Size(139, 25);
+			this->label4->Size = System::Drawing::Size(112, 20);
 			this->label4->TabIndex = 7;
 			this->label4->Text = L"Наименьший:";
 			// 
@@ -253,7 +264,7 @@ namespace My5практика {
 			this->label5->AutoSize = true;
 			this->label5->Location = System::Drawing::Point(6, 101);
 			this->label5->Name = L"label5";
-			this->label5->Size = System::Drawing::Size(139, 25);
+			this->label5->Size = System::Drawing::Size(112, 20);
 			this->label5->TabIndex = 7;
 			this->label5->Text = L"Наименьший:";
 			// 
@@ -262,7 +273,7 @@ namespace My5практика {
 			this->label6->AutoSize = true;
 			this->label6->Location = System::Drawing::Point(6, 40);
 			this->label6->Name = L"label6";
-			this->label6->Size = System::Drawing::Size(134, 25);
+			this->label6->Size = System::Drawing::Size(111, 20);
 			this->label6->TabIndex = 6;
 			this->label6->Text = L"Наибольший:";
 			// 
@@ -272,7 +283,7 @@ namespace My5практика {
 			this->textBox3->ForeColor = System::Drawing::Color::Crimson;
 			this->textBox3->Location = System::Drawing::Point(11, 129);
 			this->textBox3->Name = L"textBox3";
-			this->textBox3->Size = System::Drawing::Size(174, 30);
+			this->textBox3->Size = System::Drawing::Size(174, 26);
 			this->textBox3->TabIndex = 5;
 			// 
 			// textBox4
@@ -281,21 +292,21 @@ namespace My5практика {
 			this->textBox4->ForeColor = System::Drawing::Color::GreenYellow;
 			this->textBox4->Location = System::Drawing::Point(11, 68);
 			this->textBox4->Name = L"textBox4";
-			this->textBox4->Size = System::Drawing::Size(174, 30);
+			this->textBox4->Size = System::Drawing::Size(174, 26);
 			this->textBox4->TabIndex = 4;
 			// 
 			// textBox5
 			// 
 			this->textBox5->Location = System::Drawing::Point(58, 30);
 			this->textBox5->Name = L"textBox5";
-			this->textBox5->Size = System::Drawing::Size(100, 30);
+			this->textBox5->Size = System::Drawing::Size(100, 26);
 			this->textBox5->TabIndex = 11;
 			// 
 			// textBox6
 			// 
 			this->textBox6->Location = System::Drawing::Point(58, 66);
 			this->textBox6->Name = L"textBox6";
-			this->textBox6->Size = System::Drawing::Size(100, 30);
+			this->textBox6->Size = System::Drawing::Size(100, 26);
 			this->textBox6->TabIndex = 12;
 			// 
 			// radioButton1
@@ -303,9 +314,8 @@ namespace My5практика {
 			this->radioButton1->AutoSize = true;
 			this->radioButton1->Location = System::Drawing::Point(174, 65);
 			this->radioButton1->Name = L"radioButton1";
-			this->radioButton1->Size = System::Drawing::Size(58, 29);
+			this->radioButton1->Size = System::Drawing::Size(48, 24);
 			this->radioButton1->TabIndex = 13;
-			this->radioButton1->TabStop = true;
 			this->radioButton1->Text = L"3D";
 			this->radioButton1->UseVisualStyleBackColor = true;
 			this->radioButton1->CheckedChanged += gcnew System::EventHandler(this, &MyForm::radioButton1_CheckedChanged);
@@ -315,9 +325,8 @@ namespace My5практика {
 			this->radioButton2->AutoSize = true;
 			this->radioButton2->Location = System::Drawing::Point(174, 28);
 			this->radioButton2->Name = L"radioButton2";
-			this->radioButton2->Size = System::Drawing::Size(58, 29);
+			this->radioButton2->Size = System::Drawing::Size(48, 24);
 			this->radioButton2->TabIndex = 14;
-			this->radioButton2->TabStop = true;
 			this->radioButton2->Text = L"2D";
 			this->radioButton2->UseVisualStyleBackColor = true;
 			this->radioButton2->CheckedChanged += gcnew System::EventHandler(this, &MyForm::radioButton2_CheckedChanged);
@@ -327,7 +336,7 @@ namespace My5практика {
 			this->label8->AutoSize = true;
 			this->label8->Location = System::Drawing::Point(8, 32);
 			this->label8->Name = L"label8";
-			this->label8->Size = System::Drawing::Size(44, 25);
+			this->label8->Size = System::Drawing::Size(33, 20);
 			this->label8->TabIndex = 15;
 			this->label8->Text = L"x = ";
 			// 
@@ -336,7 +345,7 @@ namespace My5практика {
 			this->label9->AutoSize = true;
 			this->label9->Location = System::Drawing::Point(8, 69);
 			this->label9->Name = L"label9";
-			this->label9->Size = System::Drawing::Size(44, 25);
+			this->label9->Size = System::Drawing::Size(33, 20);
 			this->label9->TabIndex = 16;
 			this->label9->Text = L"y = ";
 			// 
@@ -344,7 +353,7 @@ namespace My5практика {
 			// 
 			this->textBox7->Location = System::Drawing::Point(58, 102);
 			this->textBox7->Name = L"textBox7";
-			this->textBox7->Size = System::Drawing::Size(100, 30);
+			this->textBox7->Size = System::Drawing::Size(100, 26);
 			this->textBox7->TabIndex = 17;
 			// 
 			// label10
@@ -352,7 +361,7 @@ namespace My5практика {
 			this->label10->AutoSize = true;
 			this->label10->Location = System::Drawing::Point(8, 107);
 			this->label10->Name = L"label10";
-			this->label10->Size = System::Drawing::Size(44, 25);
+			this->label10->Size = System::Drawing::Size(34, 20);
 			this->label10->TabIndex = 18;
 			this->label10->Text = L"z = ";
 			// 
@@ -392,10 +401,11 @@ namespace My5практика {
 			this->button2->TabIndex = 20;
 			this->button2->Text = L"Закрыть";
 			this->button2->UseVisualStyleBackColor = true;
+			this->button2->Click += gcnew System::EventHandler(this, &MyForm::Button2_Click);
 			// 
 			// MyForm
 			// 
-			this->AutoScaleDimensions = System::Drawing::SizeF(12, 25);
+			this->AutoScaleDimensions = System::Drawing::SizeF(9, 20);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
 			this->ClientSize = System::Drawing::Size(818, 666);
 			this->Controls->Add(this->button2);
@@ -449,7 +459,26 @@ private: System::Void radioButton2_CheckedChanged(System::Object^ sender, System
 	this->textBox7->Enabled = false;
 }
 private: System::Void button1_Click(System::Object^ sender, System::EventArgs^ e) {
+	if (textBox5->Text != "" && textBox6->Text != "" && radioButton2->Checked == true)
+	{
+		Point_2D^ f = gcnew Point_2D(Convert::ToInt32(textBox5->Text), Convert::ToInt32(textBox6->Text));
+		int i = find(One, f);
+		if (i == -1) MessageBox::Show("Элемент не найден", "Предужпреждение");
+		else listBox1->SelectedIndex = i;
+	}
 
+
+	if (textBox5->Text != "" && textBox6->Text != "" && textBox7->Text != "" && radioButton1->Checked == true)
+	{
+		Point_3D^ f = gcnew Point_3D(Convert::ToInt32(textBox5->Text), Convert::ToInt32(textBox6->Text), Convert::ToInt32(textBox7->Text));
+		int i = find(Two, f);
+		if (i == -1) MessageBox::Show("Элемент не найден", "Предужпреждение");
+		else listBox2->SelectedIndex = i;
+	}
+	//else MessageBox::Show("Заполните поля и отметьте, какую точку нужно найти");
+}
+private: System::Void Button2_Click(System::Object^ sender, System::EventArgs^ e) {
+	this->Close();
 }
 };
 }

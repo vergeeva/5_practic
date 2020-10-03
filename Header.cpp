@@ -27,12 +27,24 @@ Point_2D::Point_2D(Point_2D^ ot)
 
 double Point_2D::Length(void)
 {
-    return sqrt(x * x + y * y);
+    return sqrt(pow(x,2) + pow(y, 2));
 }
 
 int Point_2D::operator>(Point_2D^ T)
 {
     return Length() > T->Length();;
+}
+
+Point_2D^ Point_2D::operator=(Point_2D^ T)
+{
+	this->x = T->x;
+	this->y = T->y;
+	return this;
+}
+
+int Point_2D::operator==(Point_2D^ T)
+{
+	return this->x == T->x && this->y == T->y;
 }
 
 Point_3D::Point_3D(void)
@@ -61,5 +73,19 @@ Point_3D::Point_3D(Point_3D^ ot)
 
 double Point_3D::Length(void)
 {
-    return sqrt(x * x + y * y + z*z);
+    return sqrt(pow(x, 2) + pow(y, 2) + pow(z, 2));
+}
+
+Point_3D^ Point_3D::operator=(Point_3D^ T)
+{
+	this->x = T->x;
+	this->y = T->y;
+	this->z = T->z;
+	return this;
+}
+
+int Point_3D::operator==(Point_3D^ T)
+{
+	return this->x == T->x && this->y == T->y && this->z == T->z;
+
 }

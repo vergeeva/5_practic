@@ -14,6 +14,8 @@ public:
 	{
 		return String::Format("({0}, {1})", x, y);
 	}
+	Point_2D ^operator =(Point_2D^ T);
+	int operator == (Point_2D^ T);
 };
 public ref class Point_3D
 {
@@ -31,5 +33,7 @@ public:
 	{
 		return String::Format("({0}, {1}, {2})", x, y, z);
 	}
+	Point_3D^ operator =(Point_3D^ T);
+	int operator == (Point_3D^ T);
 };
 
